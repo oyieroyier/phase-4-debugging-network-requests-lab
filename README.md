@@ -61,31 +61,33 @@ developing your own process.
 ## Your Notes Here
 
 - Add a new toy when the toy form is submitted
+  **_Error_ :**
+	<br>
+  `NameError (uninitialized constant ToysController::Toys)`
+  <br>
 
   - How I debugged:
-
-  **_Error_ :**
-  `NameError (uninitialized constant ToysController::Toys)`
 	<br>
-  **_Fix_ :**
   A model name must be in singular for, Changed the constant from `Toys` to `Toy`
   <br>
 
 - Update the number of likes for a toy
+  **_Error_ :**
+  <br>
+  `Uncaught (in promise) SyntaxError: Unexpected end of JSON input`
+  <br>
 
   - How I debugged:
-    **_Error_ :**
-    `Uncaught (in promise) SyntaxError: Unexpected end of JSON input`
-		<br>
-    **_Fix_ :**
+    <br>
     Rendered JSON.
     <br>
 
 - Donate a toy to Goodwill (and delete it from our database)
+    **_Error_ :**
+		<br>
+    ` ActionController::RoutingError (No route matches [DELETE] "/toys/9"):`
+    <br>
 
   - How I debugged:
-    **_Error_ :**
-    ` ActionController::RoutingError (No route matches [DELETE] "/toys/9"):`
-		<br>
-    **_Fix_ :**
+    <br>
     The `:destroy` helper method was not added under the allowed methods in the `:only` hash. Added it to the allowed methods.
