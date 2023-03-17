@@ -64,10 +64,25 @@ developing your own process.
 
   - How I debugged:
 
+  **_Error_ :**
+  `NameError (uninitialized constant ToysController::Toys)`
+  **_Fix_ :**
+  A model name must be in singular for, Changed the constant from `Toys` to `Toy`
+  <br>
+
 - Update the number of likes for a toy
 
   - How I debugged:
+    **_Error_ :**
+    `Uncaught (in promise) SyntaxError: Unexpected end of JSON input`
+    **_Fix_ :**
+    Rendered JSON.
+    <br>
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+    **_Error_ :**
+    ` ActionController::RoutingError (No route matches [DELETE] "/toys/9"):`
+    **_Fix_ :**
+    The `:destroy` helper method was not added under the allowed methods in the `:only` hash. Added it to the allowed methods.
