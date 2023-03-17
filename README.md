@@ -61,17 +61,19 @@ developing your own process.
 ## Your Notes Here
 
 - Add a new toy when the toy form is submitted
+  <br>
   **_Error_ :**
-	<br>
+  <br>
   `NameError (uninitialized constant ToysController::Toys)`
   <br>
 
   - How I debugged:
-	<br>
-  A model name must be in singular for, Changed the constant from `Toys` to `Toy`
-  <br>
+    <br>
+    A model name must be in singular for, Changed the constant from `Toys` to `Toy`
+    <br>
 
 - Update the number of likes for a toy
+  <br>
   **_Error_ :**
   <br>
   `Uncaught (in promise) SyntaxError: Unexpected end of JSON input`
@@ -83,10 +85,11 @@ developing your own process.
     <br>
 
 - Donate a toy to Goodwill (and delete it from our database)
-    **_Error_ :**
-		<br>
-    ` ActionController::RoutingError (No route matches [DELETE] "/toys/9"):`
-    <br>
+  <br>
+  **_Error_ :**
+  <br>
+  ` ActionController::RoutingError (No route matches [DELETE] "/toys/9"):`
+  <br>
 
   - How I debugged:
     <br>
